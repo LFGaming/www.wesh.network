@@ -1,15 +1,17 @@
 .CardContainer{
     width: 300px;
-    max-height: 345px;
+    max-height: 390px;
     box-sizing: border-box;
-    background: #010101;
+    background: #222222;
     padding: 10px;
     color: white;
+    box-shadow: 10px 10px #22222299;
     .CardText{
         border-bottom: white 1px solid;
         img{
             max-width: 80%;
             margin-bottom: 32px;
+            margin-left: 30px;
         }
         h3{
             font-weight: 400;
