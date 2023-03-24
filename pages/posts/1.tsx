@@ -5,13 +5,11 @@ import styles from "../../styles/Home.module.scss";
 import content from "./content.json"
 import parse from 'html-react-parser';
 
-
-
-
 export default function Post() {
-  let posts;
-  posts =  (content.items[0])
-  console.log(posts)
+
+  const posts = content.items.find(i => i.id === "1")
+
+	if (!posts) return <span>Not found</span>
 
   return (
     <>
@@ -33,7 +31,7 @@ export default function Post() {
                   {parse(posts.content)}
                 </p>
                 <p>
-                  <i>Posted by {posts.author} on the {posts.pubDate}</i>
+                  <i>Posted by {posts.author} on {posts.pubDate}</i>
                 </p>
               </div>
             </div>
